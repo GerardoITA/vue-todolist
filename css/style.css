@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container  {
+    margin: 5vh auto;
+    min-height: 400px;
+    max-width: 600px;
+    background-color: red;
+}
+.text-bar {
+    min-height: 100px;
+    background-color: blue;
+}
+.task_list {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+input[type=text]  {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 40px;
+    width: 75%;
+}

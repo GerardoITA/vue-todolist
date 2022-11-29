@@ -2,6 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            error: false,
             inputText: ``,
             tasks: [
                 { text: 'Fare i compiti', done: false },
@@ -14,7 +15,11 @@ createApp({
     },
     methods: {
         addTask(){
-            this.tasks.push(this.inputText)
+            this.tasks.push(this.inputText);
+            console.log(this.tasks)
+        },
+        removeTask(){
+            this.tasks.splice(this.index, 1)
         }
 
     }

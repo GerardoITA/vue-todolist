@@ -15,10 +15,11 @@
             <button @click="addTask">Add task</button>
         </div>
         <div class="task-bar">
-            <ul class="task_list" v-for="(task, index) in tasks">
+            <ul v-if="tasks.length > 0" class="task_list" v-for="(task, index) in tasks">
                 {{task.text}}
-                <i @click="removeTask" class="fa-solid fa-delete-left"></i>
+                <i @click="removeTask(index)" class="fa-solid fa-delete-left"></i>
             </ul>
+            <h2 class="task_list" v-else>Non ci sono task</h2>
         </div>
 
 

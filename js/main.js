@@ -18,8 +18,8 @@ createApp({
             this.tasks.push(this.inputText);
             console.log(this.tasks)
         },
-        removeTask(){
-            this.tasks.splice(this.index, 1)
+        removeTask(indice){
+            this.tasks.splice(indice, 1)
         }
 
     }

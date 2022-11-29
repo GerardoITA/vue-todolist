@@ -17,7 +17,7 @@
         <div class="task-bar">
             <ul v-if="tasks.length > 0" class="task_list" v-for="(task, index) in tasks">
                 {{task.text}}
-                <i :class="tasks.done ? circleCheck : circle"></i>
+                <i  @click="changeTaskStatus(index)" :class="tasks[index].done ? circleCheck : circle"></i>
                 <i @click="removeTask(index)" class="fa-solid fa-delete-left"></i>
             </ul>
             <h2 class="task_list" v-else>Non ci sono task</h2>

@@ -7,11 +7,11 @@
     margin: 5vh auto;
     min-height: 400px;
     max-width: 600px;
-    background-color: red;
+   /*  background-color: red; */
 }
 .text-bar {
     min-height: 100px;
-    background-color: blue;
+   /*  background-color: blue; */
 }
 .task_list {
     margin-top: 20px;

@@ -25,4 +25,5 @@ input[type=text]  {
 }
 i{
     cursor: pointer;
+    margin-left: 20px;
 }

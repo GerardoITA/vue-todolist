@@ -4,6 +4,11 @@ createApp({
         return {
             error: false,
             inputText: ``,
+            inputObject: {
+                text: `${this.inputText}`, done: false
+            },
+            circle: `fa-regular fa-circle`,
+            circleCheck: `fa-regular fa-circle-check`,
             tasks: [
                 { text: 'Fare i compiti', done: false },
                 { text: 'Fare la spesa', done: true },
@@ -15,7 +20,7 @@ createApp({
     },
     methods: {
         addTask(){
-            this.tasks.push(this.inputText);
+            this.tasks.push(this.inputObject);
             console.log(this.tasks)
         },
         removeTask(indice){

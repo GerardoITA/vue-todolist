@@ -23,3 +23,6 @@ input[type=text]  {
     margin-right: 40px;
     width: 75%;
 }
+i{
+    cursor: pointer;
+}

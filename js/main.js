@@ -14,7 +14,7 @@ createApp({
     },
     methods: {
         addTask(){
-            
+            this.tasks.push(this.inputText)
         }
 
     }

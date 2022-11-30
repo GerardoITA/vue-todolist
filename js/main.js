@@ -6,10 +6,6 @@ createApp({
             errorDisplay: `error`,
             errorNoDisplay: `noError`,
             inputText: ``,
-            inputObject: {
-                text: this.inputText, 
-                done: false
-            },
             circle: `fa-regular fa-circle`,
             circleCheck: `fa-regular fa-circle-check`,
             tasks: [
@@ -24,7 +20,11 @@ createApp({
     methods: {
         addTask(){
             if(this.inputText.length > 4){
-                this.tasks.unshift(this.inputObject);
+                let inputObject = {
+                    text: this.inputText,
+                    done: false,
+                }
+                this.tasks.unshift(inputObject);
                 console.log(this.inputText);
                 console.log(this.tasks);
                 this.inputText = ``;  
@@ -38,7 +38,7 @@ createApp({
             this.tasks.splice(indice, 1)
         },
        changeTaskStatus(indice){
-            if (this.tasks[indice].done = false){
+            if (this.tasks[indice].done === false){
                 this.tasks[indice].done = true
                 console.log(this.tasks[indice].done)
             } else {

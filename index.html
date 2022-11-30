@@ -13,6 +13,7 @@
         <div class="text-bar">
             <input v-model="inputText" type="text">
             <button @click="addTask">Add task</button>
+            <div :class="errore? errorDisplay : errorNoDisplay">Inserire minimo 5 lettere</div>
         </div>
         <div class="task-bar">
             <ul v-if="tasks.length > 0" class="task_list" v-for="(task, index) in tasks">

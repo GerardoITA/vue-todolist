@@ -27,3 +27,13 @@ i{
     cursor: pointer;
     margin-left: 20px;
 }
+.error {
+    color:red;
+    font-size: small;
+    margin-top: 5px;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+.noError {
+    display: none;
+}

@@ -2,10 +2,13 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            error: false,
+            errore: false,
+            errorDisplay: `error`,
+            errorNoDisplay: `noError`,
             inputText: ``,
             inputObject: {
-                text: this.inputText, done: false
+                text: this.inputText, 
+                done: false
             },
             circle: `fa-regular fa-circle`,
             circleCheck: `fa-regular fa-circle-check`,
@@ -20,10 +23,16 @@ createApp({
     },
     methods: {
         addTask(){
-            this.tasks.push(this.inputObject);
-            console.log(this.inputText);
-            console.log(this.tasks);
-            this.inputText = ``;    
+            if(this.inputText.length > 4){
+                this.tasks.unshift(this.inputObject);
+                console.log(this.inputText);
+                console.log(this.tasks);
+                this.inputText = ``;  
+                this.errore = false;
+            } else {
+                this.errore = true;
+            }
+              
         },
         removeTask(indice){
             this.tasks.splice(indice, 1)
